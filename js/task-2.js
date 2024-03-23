@@ -1,14 +1,10 @@
 function formatMessage(message, maxLength) {
-  let result;
-  if ( message.length > maxLength){
-    result = message.slice(0, maxLength) + '...'; 
-  } else{
-    result = message.slice(0, message.length)
+  if (message.length > maxLength) {
+    return message.slice(0, maxLength) + '...'; 
+  } else {
+    return message; // обрізання у вашому оригінальному блоку else було зайвим
   }
-  return result;
 }
-
-
 
                                 
 console.log(formatMessage("Curabitur ligula sapien", 16)); // "Curabitur ligula..."      
